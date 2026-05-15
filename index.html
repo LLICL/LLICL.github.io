@@ -1,251 +1,230 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lucia Perez – Portfolio de Proyectos</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <title>Portafolio 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Press+Start+2P&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- ── HERO ── -->
-  <section class="hero">
-    <div class="hero-circle"></div>
-    <div class="hero-circle-2"></div>
+  <!-- ═══ NAVBAR ═══ -->
+  <nav class="navbar">
+    <div class="nav-brand">LUMA.</div>
+    <ul class="nav-links">
+      <li><a href="#portfolio" class="active">Portafolio</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
 
-    <div class="avatar-wrap">
-      <img src="images/lucia.jpeg" alt="Lucia Perez" />
+  <!-- ═══ HERO + BIO (unificada) ═══ -->
+  <section class="hero" id="portfolio">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="avatar-frame">
+          <div class="avatar-ring"></div>
+          <div class="avatar-wrap">
+            <img src="images/lucia.jpeg" alt="Lucia Perez" />
+          </div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <p class="hero-greeting">Lucía Margarita Pérez Álvarez</p>
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Est. Ingeniería de Sistemas
+        </div>
+      </div>
     </div>
-
-    <p class="hero-tag">Portfolio · 2026</p>
-
-    <h1 class="hero-name">
-      Lucia<br><em>Perez</em>
-    </h1>
-
-    <p class="hero-subtitle"> L.M.P </p>
 
     <div class="hero-divider"></div>
 
-    <p class="hero-bio">
-        Estudiante de Ing. Sistemas
-    </p>
+    <h1 class="portfolio-title">
+      <span class="title-serif">Porta</span><span class="title-pixel">folio</span>
+    </h1>
+    <p class="portfolio-subtitle">de proyectos</p>
 
-    <div class="hero-cta">
-      <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
-      <a href="#contacto" class="btn btn-outline">Contactar</a>
+    <div class="bio-content">
+      <p>
+        Soy <strong>Lucia Perez</strong>, estudiante de Ingeniería de Sistemas
+        apasionada por el diseño, desarrollo web, programacion y herramientras de desarrollo digital.
+      </p>
+      <p>
+        Me encanta combinar la tecnología con el diseño para construir
+        experiencias que tengan un buen impacto en las innovaciones actuales, Trabajo desde la programación hasta la edición
+        visual, cada proyecto es una oportunidad para aprender y expresar ideas.
+      </p>
     </div>
 
-    <div class="scroll-hint">
-      <span>Scroll</span>
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M12 5v14M5 12l7 7 7-7"/>
-      </svg>
+    <div class="bio-tag">
+      <span class="tag-icon">✦</span>
+      Programación<span class="tag-sep">|</span> Desarollo Web
+    </div>
+
+    <div class="loading-bar">
+      <div class="loading-fill"></div>
     </div>
   </section>
 
-  <!-- ── ABOUT / SKILLS ── -->
-  <section class="about-section" id="skills">
+  <!-- ═══ SKILLS ═══ -->
+  <section class="skills-section" id="stories">
     <div class="container">
-      <div class="about-grid reveal">
-        <div class="about-text">
-          <p class="section-label">Perfil Profesional</p>
-          <h2 class="section-title">SOBRE MÍ<br></h2>
-          <p>
-            Soy Lucia Perez, Estudiante de ingeniería de sistemas de la información, actualmente cursando y aprendiendo lenguajes de programación, herramientas de ciberseguridad, y trabajando con aplicaciones móviles.
-          </p>
-          <p>
-            Siempre estoy en busca de nuevos retos creativos—porque cada proyecto es una nueva oportunidad para explorar ideas y llevarlas más lejos.
-          </p>
-          <div class="info-row">
-            <div class="info-item">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/>
-              </svg>
-              lan3_xm
+      
+
+        <div class="skills-group">
+          <h3 class="skills-group-title">Lenguajes</h3>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="skill-badge" style="background:#ffffff;">
+                <img src="images/icon_python.png" alt="Python" class="skill-img" onerror="this.style.display='none'" />
+              </div>
+              <span class="skill-name">Python</span>
             </div>
-            <div class="info-item">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
-              </svg>
-              perezalvarezlucia2007@gmail.com
+            <div class="skill-card">
+              <div class="skill-badge" style="background:#ffffff;">
+                <img src="images/icon_html.png" alt="HTML" class="skill-img" onerror="this.style.display='none'" />
+              </div>
+              <span class="skill-name">HTML</span>
+            </div>
+            <div class="skill-card">
+              <div class="skill-badge" style="background:#ffffff;">
+                <img src="images/icon_css.png" alt="CSS" class="skill-img" onerror="this.style.display='none'" />
+              </div>
+              <span class="skill-name">CSS</span>
+            </div>
+            <div class="skill-card">
+              <div class="skill-badge" style="background:#ffffff;">
+                <img src="images/icon_js.png" alt="JavaScript" class="skill-img" onerror="this.style.display='none'" />
+              </div>
+              <span class="skill-name">JavaScript</span>
+            </div>
+            <div class="skill-card">
+              <div class="skill-badge" style="background:#ffffff;">
+                <img src="images/icon_lua.png" alt="Lua" class="skill-img" onerror="this.style.display='none'" />
+              </div>
+              <span class="skill-name">Lua</span>
             </div>
           </div>
         </div>
 
-        <div>
-          <p class="section-label">Lenguajes de programación</p>
-          <ul class="skills-list" style="margin-top:12px;">
-            <li><span class="skill-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg></span>LUA</li>
-            <li><span class="skill-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></span>Java</li>
-            <li><span class="skill-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span>PHP</li>
-            <li><span class="skill-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg></span>HTML / JS / CSS</li>
-          </ul>
-          <div>
-            <p class="section-label" style="margin-top:40px;">Herramientas</p>
-            <ul class="skills-list" style="margin-top:12px;">
-              <li><span class="skill-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C7.58 3 4 4.79 4 7v10c0 2.21 3.58 4 8 4s8-1.79 8-4V7c0-2.21-3.58-4-8-4zm0 2c3.87 0 6 1.5 6 2s-2.13 2-6 2-6-1.5-6-2 2.13-2 6-2zM6 17v-2.05c1.3.79 3.4 1.3 6 1.55V17c0 .5-2.13 2-6 2zm0-5v-2.05c1.3.79 3.4 1.3 6 1.55V12c0 .5-2.13 2-6 2zm8-2v2.05c2.6-.25 4.7-.76 6-1.55V10c0 .5-2.13 2-6 2zm0-5v2.05c2.6-.25 4.7-.76 6-1.55V7c0 .5-2.13 2-6 2z"/></svg></span>SQL (Workbench)</li>
-              <li><span class="skill-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 3H7c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-4 14H7v-2h6v2zm4-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg></span>NoSQL</li>
-            </ul>
+      <div class="skills-group">
+        <h3 class="skills-group-title">Herramientas</h3>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-badge" style="background:#ffffff;">
+              <img src="images/icon_mysql.png" alt="SQL" class="skill-img" onerror="this.style.display='none'" />
+            </div>
+            <span class="skill-name">MySQL</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── PROYECTOS ── -->
-  <section class="projects-section" id="proyectos">
+  <!-- ═══ PROYECTOS ═══ -->
+  <section class="proyectos-section" id="proyectos">
     <div class="container">
-      <div class="reveal">
-        <p class="section-label">Mi trabajo</p>
-        <h2 class="section-title">Proyectos</h2>
-      </div>
-      <div class="projects-grid reveal">
+      <h2 class="section-title pixel-title">Proyectos</h2>
 
-        <!-- Proyecto 1 -->
-        <div class="project-card">
-          <div class="project-img-wrap">
-            <img src="pictures/proyecto1.jpg" alt="Proyecto 1" onerror="this.parentElement.classList.add('no-img')" />
-            <div class="project-img-placeholder">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
-                <polyline points="21,15 16,10 5,21"/>
-              </svg>
-              <span>Imagen del proyecto</span>
-            </div>
+      <div class="proyectos-grid">
+
+        <div class="proyecto-card">
+          <div class="card-img" style="background: linear-gradient(135deg, #1a1a2e, #16213e);">
+            <img src="images/img_proyecto.png" alt="Manual de convivencia" class="card-img-file" onerror="this.style.display='none'" />
           </div>
-          <div class="project-info">
-            <h3 class="project-title">Nombre del Proyecto</h3>
-            <p class="project-desc">Descripción breve del proyecto. Explica qué hace, cuál fue el reto y qué aprendiste.</p>
-            <div class="project-tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">Python</span>
-            </div>
+          <div class="card-body">
+            <h3 class="card-title">Manual de convivencia</h3>
+            <p class="card-desc">APK desarrollada para gestionar manuales de convivencia escolar. Incluye las normas y las directivas de la institucion digitalizadas.</p>
           </div>
+          <div class="card-tags">
+            <span class="card-tag">HTML</span>
+            <span class="card-tag">CSS</span>
+            <span class="card-tag">JS</span>
+          </div>
+          <a href="https://github.com/LLICL/Manual_Virtual_IEAL" target="_blank" class="card-github">Ver en GitHub</a>
         </div>
 
-        <!-- Proyecto 2 -->
-        <div class="project-card">
-          <div class="project-img-wrap">
-            <img src="pictures/proyecto2.jpg" alt="Proyecto 2" onerror="this.parentElement.classList.add('no-img')" />
-            <div class="project-img-placeholder">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
-                <polyline points="21,15 16,10 5,21"/>
-              </svg>
-              <span>Imagen del proyecto</span>
-            </div>
+        <div class="proyecto-card">
+          <div class="card-img" style="background: linear-gradient(135deg, #1a3a2a, #2d5a3d);"></div>
+          <div class="card-body">
+            <h3 class="card-title"></h3>
+            <p class="card-desc"></p>
           </div>
-          <div class="project-info">
-            <h3 class="project-title">Nombre del Proyecto</h3>
-            <p class="project-desc">Descripción breve del proyecto. Explica qué hace, cuál fue el reto y qué aprendiste.</p>
-            <div class="project-tags">
-              <span class="tag">Java</span>
-              <span class="tag">SQL</span>
-            </div>
+          <div class="card-tags">
+            <span class="card-tag"></span>
+            <span class="card-tag"></span>
+            <span class="card-tag"></span>
           </div>
+          <a href="https://github.com/LLICL" target="_blank" class="card-github">Ver en GitHub</a>
         </div>
 
-        <!-- Proyecto 3 -->
-        <div class="project-card">
-          <div class="project-img-wrap">
-            <img src="pictures/proyecto3.jpg" alt="Proyecto 3" onerror="this.parentElement.classList.add('no-img')" />
-            <div class="project-img-placeholder">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
-                <polyline points="21,15 16,10 5,21"/>
-              </svg>
-              <span>Imagen del proyecto</span>
-            </div>
+        <div class="proyecto-card">
+          <div class="card-img" style="background: linear-gradient(135deg, #3a1a2a, #5a2a3d);"></div>
+          <div class="card-body">
+            <h3 class="card-title"></h3>
+            <p class="card-desc"></p>
           </div>
-          <div class="project-info">
-            <h3 class="project-title">Nombre del Proyecto</h3>
-            <p class="project-desc">Descripción breve del proyecto. Explica qué hace, cuál fue el reto y qué aprendiste.</p>
-            <div class="project-tags">
-              <span class="tag">PHP</span>
-              <span class="tag">NoSQL</span>
-              <span class="tag">LUA</span>
-            </div>
+          <div class="card-tags">
+            <span class="card-tag"></span>
+            <span class="card-tag"></span>
+            <span class="card-tag"></span>
           </div>
+          <a href="https://github.com/LLICL" target="_blank" class="card-github">Ver en GitHub</a>
         </div>
 
-        <!-- Proyecto 4 -->
-        <div class="project-card">
-          <div class="project-img-wrap">
-            <img src="pictures/proyecto4.jpg" alt="Proyecto 4" onerror="this.parentElement.classList.add('no-img')" />
-            <div class="project-img-placeholder">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
-                <polyline points="21,15 16,10 5,21"/>
-              </svg>
-              <span>Imagen del proyecto</span>
-            </div>
+        <div class="proyecto-card">
+          <div class="card-img" style="background: linear-gradient(135deg, #1a2a3a, #2a3a5a);"></div>
+          <div class="card-body">
+            <h3 class="card-title"></h3>
+            <p class="card-desc"></p>
           </div>
-          <div class="project-info">
-            <h3 class="project-title">Nombre del Proyecto</h3>
-            <p class="project-desc">Descripción breve del proyecto. Explica qué hace, cuál fue el reto y qué aprendiste.</p>
-            <div class="project-tags">
-              <span class="tag">Java</span>
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-            </div>
+          <div class="card-tags">
+            <span class="card-tag"></span>
+            <span class="card-tag"></span>
+            <span class="card-tag"></span>
           </div>
+          <a href="https://github.com/LLICL" target="_blank" class="card-github">Ver en GitHub</a>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ── EDUCATION ── -->
-  <section class="edu-section">
-    <div class="container reveal">
-      <p class="section-label">Formación</p>
-      <h2 class="section-title">Educación</h2>
-      <div class="edu-card">
-        <h3>Universidad del Sinú Elías Bechara Zaium</h3>
-        <p>Actualmente cursando estudios en Universidad del Sinú, profundizando en diseño web, programación y computación móvil.</p>
-        <span class="edu-badge">En curso · 2026</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── CONTACT ── -->
-  <section class="contact-section" id="contacto">
-    <div class="container reveal">
-      <p class="section-label">¿Hablamos?</p>
-      <h2 class="section-title" style="margin-bottom:36px;">Trabajemos juntos</h2>
-      <div class="contact-links">
-        <a href="https://github.com/LLICL" target="_blank">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-          </svg>
-          @LLICL
+  <!-- ═══ CONTACTO ═══ -->
+  <section class="contacto-section" id="contacto">
+    <div class="container">
+      <h2 class="section-title pixel-title">Contacto</h2>
+      <div class="contacto-grid">
+        <a href="mailto:perezalvarezlucia2007@gmail.com" target="_blank" class="contacto-card">
+          <div class="contacto-icon" style="background:#ea4335;">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </div>
+          <span class="contacto-label">Gmail</span>
+          <span class="contacto-handle">perezalvarezlucia2007@gmail.com</span>
         </a>
-        <a href="https://www.instagram.com/lan3_xm" target="_blank">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="2" y="2" width="20" height="20" rx="5"/>
-            <circle cx="12" cy="12" r="4"/>
-            <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
-          </svg>
-          @lan3_xm
+        <a href="https://github.com/LLICL" target="_blank" class="contacto-card">
+          <div class="contacto-icon" style="background:#333;">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.577.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+          </div>
+          <span class="contacto-label">GitHub</span>
+          <span class="contacto-handle">@LLICL</span>
         </a>
-        <a href="mailto:perezalvarezlucia2007@gmail.com">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-            <polyline points="22,6 12,13 2,6"/>
-          </svg>
-          perezalvarezlucia2007@gmail.com
+        <a href="https://www.linkedin.com/in/lucia-margarita-perez-alvarez-0b056631a/" target="_blank" class="contacto-card">
+          <div class="contacto-icon" style="background:#0077b5;">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zm-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79zM6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68zm1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          </div>
+          <span class="contacto-label">LinkedIn</span>
+          <span class="contacto-handle">Lucia Perez</span>
         </a>
       </div>
     </div>
   </section>
 
   <footer>
-    © 2026 Lucia Perez · All rights reserved
+    <p>&copy; 2026 Lucia Perez — Todos los derechos reservados</p>
   </footer>
 
   <script src="script.js"></script>

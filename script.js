@@ -1,55 +1,50 @@
-/* ══════════════════════════════════════
-    LUCIA PEREZ — PORTFOLIO 2026
-    main.js
-═════════════════════════════════════ */
+(function () {
 
-function initScrollReveal() {
-  const revealEls = document.querySelectorAll('.reveal');
+  /* ─── NAV ACTIVE LINK ─── */
+  function initNav() {
+    const links = document.querySelectorAll('.nav-links a');
+    const sections = document.querySelectorAll('section[id]');
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
+    function updateActive() {
+      let current = '';
+      sections.forEach((sec) => {
+        const top = sec.getBoundingClientRect().top;
+        if (top <= 200) current = sec.id;
       });
-    },
-    { threshold: 0.12 }
-  );
-
-  revealEls.forEach((el) => observer.observe(el));
-}
-
-function initSmoothScroll() {
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener('click', (e) => {
-      const target = document.querySelector(anchor.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  });
-}
-
-function initScrollHint() {
-  const hint = document.querySelector('.scroll-hint');
-  if (!hint) return;
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 80) {
-      hint.style.opacity = '0';
-      hint.style.pointerEvents = 'none';
-    } else {
-      hint.style.opacity = '.4';
-      hint.style.pointerEvents = 'auto';
+      links.forEach((link) => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+      });
     }
-  }, { passive: true });
-}
 
-document.addEventListener('DOMContentLoaded', () => {
-  initScrollReveal();
-  initSmoothScroll();
-  initScrollHint();
-});
+    window.addEventListener('scroll', updateActive, { passive: true });
+    updateActive();
+  }
+
+  /* ─── LOADING BAR RESET ─── */
+  function initLoadingBar() {
+    const fill = document.querySelector('.loading-fill');
+    if (!fill) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            fill.style.animation = 'none';
+            void fill.offsetHeight;
+            fill.style.animation = 'load 2.5s ease-in-out forwards';
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    const hero = document.querySelector('.hero');
+    if (hero) observer.observe(hero);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    initNav();
+    initLoadingBar();
+  });
+
+})();
